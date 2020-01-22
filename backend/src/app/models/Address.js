@@ -10,7 +10,7 @@ class Address extends Model {
         district: Sequelize.STRING,
         city: Sequelize.STRING,
         state: Sequelize.STRING,
-        cep: Sequelize.STRING,
+        zipcode: Sequelize.STRING,
         reference: Sequelize.STRING,
       },
       {

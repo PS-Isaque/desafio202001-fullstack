@@ -1,4 +1,4 @@
-import * as Yup from 'yup';
+// import * as Yup from 'yup';
 import Address from '../models/Address';
 
 class AddressController {
@@ -15,7 +15,7 @@ class AddressController {
       district,
       city,
       state,
-      cep,
+      zipcode,
       reference,
     } = await Address.create(req.body);
 
@@ -27,7 +27,7 @@ class AddressController {
       district,
       city,
       state,
-      cep,
+      zipcode,
       reference,
     });
   }

@@ -5,6 +5,7 @@ module.exports = {
   password: 'root',
   database: 'publicsoft',
   define: {
+    timestamps: true,
     underscored: true,
     underscoredAll: true,
   },
