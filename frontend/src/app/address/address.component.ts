@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./address.component.css']
 })
 export class AddressComponent implements OnInit {
+  street: String;
+  number: number;
+  complement: String;
+  district: String;
+  city: String;
+  state: String;
+  zipcode: String;
+  reference: String;
+
 
   constructor() { }
 
