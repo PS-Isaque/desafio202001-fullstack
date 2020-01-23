@@ -2,6 +2,8 @@ const Place = require("../models/Place");
 
 module.exports = {
   async index(req, res) {
+    const params = req.query;
+    console.log(params);
     const places = await Place.findAll();
 
     return res.status(200).json({ data: places });

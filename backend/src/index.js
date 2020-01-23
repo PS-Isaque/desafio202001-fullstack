@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const db = require("./config/database");
 
 //testing connection
@@ -11,6 +12,7 @@ db.authenticate()
 const routes = require("./routes");
 
 //settup the server
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
