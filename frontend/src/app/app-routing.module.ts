@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddressComponent } from './address/address.component';
+import { AddressFormComponent } from './address-form/address-form.component';
+import { CrudComponent } from './components/crud/crud.component';
 
 
 const routes: Routes = [
-  { path: 'address', component: AddressComponent },
+  { path: '', component: CrudComponent},
+  { path: 'new', component: AddressFormComponent },
+  { path: 'update/:id', component: AddressFormComponent },
 ];
 
 @NgModule({
@@ -12,3 +15,19 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+/*
+{
+    path: "new",
+    component: AddressFormComponent,
+    resolve: {
+      address: AddressResolverGuard
+    }
+  },{
+    path: "update/:id/",
+    component: AddressFormComponent,
+    resolve: {
+      address: AddressResolverGuard
+    }
+  },
+  */

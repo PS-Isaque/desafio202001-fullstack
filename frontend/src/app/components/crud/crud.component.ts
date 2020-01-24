@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from 'src/app/services/crud.service';
 import { Address } from 'src/app/models/address.models';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-crud',
@@ -8,25 +9,29 @@ import { Address } from 'src/app/models/address.models';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit {
-  address: Address;
+  address = new Address();
   erro: any;
-  constructor(private crudService: CrudService) {
-    this.getter()
+  constructor(private crudService: CrudService,
+    private router: Router,
+    private route: ActivatedRoute) {
   }
 
   ngOnInit() {
+    this.onRefresh()
   }
-  getter() {
+  onRefresh() {
     this.crudService.getIndex().subscribe(
       (data: Address) => {
         this.address = data;
-        console.log("O data que recebemos", data);
-        console.log("A variavel que preenchemos", this.address);
       },
       (error: any)=>  {
         this.erro = error;
         console.error("Error: ", error)
       })
   }
+
+    onEdit(id) {
+      this.router.navigate([`update`, id], {relativeTo: this.route});
+    }
 
 }
