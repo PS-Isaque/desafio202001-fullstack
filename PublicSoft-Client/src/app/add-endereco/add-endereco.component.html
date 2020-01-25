@@ -1,0 +1,73 @@
+<h3>Adicionar Endereco</h3>
+<div [hidden]="submitted">
+  <p>Todos os campos são obrigatórios</p>
+  <form #addEnderecoForm="ngForm">
+    
+    <div class="form-group">
+      <label for="cep">CEP</label>
+      <input type="text" class="form-control" id="cep" value="" required
+        [(ngModel)]="endereco.cep" name="cep" #cep="ngModel">
+      <div [hidden]="cep.valid || cep.pristine" class="alert alert-danger">
+        O campo "CEP" é obrigatório
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="rua">Rua</label>
+      <input type="text" class="form-control" id="rua" required [(ngModel)]="endereco.rua" name="rua" #rua="ngModel">
+      <div [hidden]="rua.valid || rua.pristine" class="alert alert-danger">
+        O campo "Rua" é obrigatório
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="numero">Número</label>
+      <input type="numero" class="form-control" id="numero" required [(ngModel)]="endereco.numero" name="numero"
+        #numero="ngModel" pattern="[0-9]+$">
+      <div [hidden]="numero.valid || numero.pristine" class="alert alert-danger">
+        O campo "Número" é obrigatório
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="bairro">Bairro</label>
+      <input type="text" class="form-control" id="bairro" required [(ngModel)]="endereco.bairro" name="bairro"
+        #bairro="ngModel">
+      <div [hidden]="bairro.valid || bairro.pristine" class="alert alert-danger">
+        O campo "Bairro" é obrigatório
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cidade">Cidade</label>
+      <input type="text" class="form-control" id="cidade" required [(ngModel)]="endereco.cidade" name="cidade"
+        #cidade="ngModel">
+      <div [hidden]="cidade.valid || cidade.pristine" class="alert alert-danger">
+        O campo "Cidade" é obrigatório
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="estado">Estado</label>
+      <input type="text" class="form-control" id="estado" required [(ngModel)]="endereco.estado" name="estado"
+        #estado="ngModel">
+      <div [hidden]="estado.valid || estado.pristine" class="alert alert-danger">
+        O campo "Estado" é obrigatório
+      </div>
+    </div>
+
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-dark" (click)="goBack()">Voltar</button>
+      <button type="button" class="btn btn-dark" (click)="addEndereco()"
+      [disabled]="!addEnderecoForm.form.valid">Salvar</button>
+    </div>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <p>Endereço salvo com sucesso!</p>
+  <div class="btn-group btn-group-sm">
+    <button type="button" class="btn btn-dark" (click)="goBack()">Voltar</button>
+    <button type="button" class="btn btn-dark" (click)="newEndereco(); addEnderecoForm.reset()">Continuar</button>
+  </div>
+</div>

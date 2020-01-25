@@ -1,0 +1,4 @@
+<h5>Lista de Endereços</h5>
+<div *ngFor="let enderecos of enderecos">
+  <a [routerLink]="['/enderecos', enderecos.id]" style="color:black"><span class="badge badge-dark">{{enderecos.id}}</span> -> {{ enderecos.rua }}</a>
+</div>
