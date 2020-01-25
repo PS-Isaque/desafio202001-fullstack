@@ -1,30 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
-import { ModalModule } from 'ngx-bootstrap/modal';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddressComponent } from './address/address.component';
-import { CrudComponent } from './components/crud/crud.component';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { AddressFormComponent } from './address-form/address-form.component';
+import { ListAddressComponent } from './address/list-address/list-address.component';
+import { AddAddressComponent } from './address/add-address/add-address.component';
+import { EditAddressComponent } from './address/edit-address/edit-address.component';
+import { ApiService } from './services/crud.service';
+import { routing } from './app-routing.module';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddressComponent,
-    CrudComponent,
-    AddressFormComponent
+    ListAddressComponent,
+    AddAddressComponent,
+    EditAddressComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
+    routing,
     ReactiveFormsModule,
-    ModalModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [HttpClient],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,47 @@
+<div class="col-md-6 user-container">
+  <h2 style="margin: auto"> List Details</h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addAddress()"> Add Address</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+          <th>#</th>
+          <th>Street</th>
+          <th>Number</th>
+          <th>Complement</th>
+          <th>District</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zipcode</th>
+          <th>Reference</th>
+          <th>#</th>
+          <th>#</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let address of addresses">
+      <td>{{ address.id }}</td>
+      <td>{{ address.street }}</td>
+      <td>{{ address.number }}</td>
+      <td>{{ address.complement }}</td>
+      <td>{{ address.district }}</td>
+      <td>{{ address.city }}</td>
+      <td>{{ address.state }}</td>
+      <td>{{ address.zipcode }}</td>
+      <td>{{ address.reference }}</td>
+      <td>
+        <button
+          class="btn btn-outline-warning mb-1 btn-sm"
+          (click)="editAddress(address.id)"
+        >
+          Atualizar
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-outline-danger mb-1 btn-sm" href="#" (click)="deleteAddress(address)">
+          Remover
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

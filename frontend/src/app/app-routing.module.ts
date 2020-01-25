@@ -1,33 +1,12 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AddressFormComponent } from './address-form/address-form.component';
-import { CrudComponent } from './components/crud/crud.component';
-
+import { RouterModule, Routes } from '@angular/router';
+import { AddAddressComponent } from './address/add-address/add-address.component';
+import { ListAddressComponent } from './address/list-address/list-address.component';
+import { EditAddressComponent } from './address/edit-address/edit-address.component';
 
 const routes: Routes = [
-  { path: '', component: CrudComponent},
-  { path: 'new', component: AddressFormComponent },
-  { path: 'update/:id', component: AddressFormComponent },
+  { path: 'add-address', component: AddAddressComponent },
+  { path: '', component: ListAddressComponent },
+  { path: 'edit-address/:id', component: EditAddressComponent },
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
-
-/*
-{
-    path: "new",
-    component: AddressFormComponent,
-    resolve: {
-      address: AddressResolverGuard
-    }
-  },{
-    path: "update/:id/",
-    component: AddressFormComponent,
-    resolve: {
-      address: AddressResolverGuard
-    }
-  },
-  */
+export const routing = RouterModule.forRoot(routes);
