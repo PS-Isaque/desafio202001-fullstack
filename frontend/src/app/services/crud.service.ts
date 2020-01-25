@@ -39,7 +39,7 @@ import { Address } from '../models/address.models';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'http://localhost:3333/address';
+  baseUrl: string = 'http://192.168.1.100:3333/address';
 
   getAddresses() : Observable<any> {
     return this.http.get<any>(this.baseUrl);
