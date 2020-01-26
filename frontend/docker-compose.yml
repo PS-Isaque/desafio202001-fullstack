@@ -1,0 +1,7 @@
+web:
+  build: .
+  command: ng serve --host 0.0.0.0
+  volumes:
+    - .:/frontend-publicsoft
+  ports:
+    - "4200:4200"

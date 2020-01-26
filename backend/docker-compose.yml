@@ -1,0 +1,7 @@
+web:
+  build: .
+  command: yarn sucrase-node src/server.js
+  volumes:
+    - .:/backend-publicsoft
+  ports:
+    - "3333:3333"

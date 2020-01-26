@@ -1,0 +1,70 @@
+<div class="card-personalizado border-personalizado">
+  <h3>Editar</h3>
+  <hr>
+<form action="" class="needs-validation" novalidate [formGroup]="editForm">
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="street">Rua</label>
+      <input type="text" class="form-control" id="street" placeholder="Rua Avelina dos Santos" value="" formControlName="street" [ngClass]="{ 'is-invalid': submitted && hasError('street') }">
+      <div class="invalid-feedback" *ngIf="hasError('street') && hasError('street')['required']">
+        Por favor informe a rua.
+      </div>
+    </div>
+    <div class="col-md-2 mb-3">
+      <label for="number">Número</label>
+      <input type="text" class="form-control" id="number" placeholder="901" value="" formControlName="number" [ngClass]="{ 'is-invalid': submitted && hasError('number') }">
+      <div class="invalid-feedback" *ngIf="hasError('number') && hasError('number')['required']">
+        Por favor informe o número.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="complement">Complemento</label>
+        <input type="text" class="form-control" id="complement" placeholder="Casa" aria-describedby="inputGroupPrepend" formControlName="complement" [ngClass]="{ 'is-invalid': submitted && hasError('complement') }">
+        <div class="invalid-feedback" *ngIf="hasError('complement') && hasError('complement')['required']">
+          Por favor informe o complemento.
+        </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="district">Bairro</label>
+      <input type="text" class="form-control" id="district" placeholder="Valentina 1"  formControlName="district" [ngClass]="{ 'is-invalid': submitted && hasError('district') }">
+      <div class="invalid-feedback" *ngIf="hasError('district') && hasError('district')['required']">
+        Por favor informe o bairro.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="city">Cidade</label>
+      <input type="text" class="form-control" id="city" placeholder="João Pessoa" formControlName="city" [ngClass]="{ 'is-invalid': submitted && hasError('city') }">
+      <div class="invalid-feedback" *ngIf="hasError('city') && hasError('city')['required']">
+        Por favor informe a cidade.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="state">Estado</label>
+      <input type="text" class="form-control" id="state" placeholder="Paraíba" formControlName="state" [ngClass]="{ 'is-invalid': submitted && hasError('state') }">
+      <div class="invalid-feedback" *ngIf="hasError('state') && hasError('state')['required']">
+        Por favor informe o estado.
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-3 mb-3">
+      <label for="zipcode">CEP</label>
+      <input type="text" class="form-control" id="zipcode" placeholder="58064550" formControlName="zipcode" [ngClass]="{ 'is-invalid': submitted && hasError('zipcode') }">
+      <div class="invalid-feedback" *ngIf="hasError('zipcode') && hasError('zipcode')['required']">
+        Por favor informe o CEP.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="reference">Referência</label>
+      <input type="text" class="form-control" id="reference" placeholder="Em frente ao Mercadinho União" formControlName="reference" [ngClass]="{ 'is-invalid': submitted && hasError('reference') }">
+      <div class="invalid-feedback" *ngIf="hasError('reference') && hasError('reference')['required']">
+        Por favor informe o ponto de referência.
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="onSubmit()" type="submit">Salvar</button>
+  <button type="button" class="btn btn-default" (click)="onCancel()" type="submit">Cancelar</button>
+</form>
+</div>
