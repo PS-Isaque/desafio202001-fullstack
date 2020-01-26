@@ -1,0 +1,61 @@
+version: '3.7'
+services:
+  apis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: php
+    container_name: "challenge"
+    expose:
+      - "9000"
+    ports:
+      - 9000:9000
+    volumes:
+    - ./:/data/challenge
+    - /data/challenge/vendor
+    environment:
+      APPLICATION_ENV: development
+      DB_HOST: "db"
+      DB_NAME: "challenge"
+      DB_USER: "root"
+      DB_PASSWORD: "root"
+      DB_PORT: "3306"
+      LOG_PATH: "php://stdout"
+      LOG_LEVEL: "100"
+    networks:
+      - default
+    depends_on:
+      - db
+    working_dir: /data/challenge/
+
+  nginx:
+    container_name: nginx
+    image: nginx:1.16.0
+    ports:
+      - 80:80
+    volumes:
+      - ./.docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./.docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - apis
+    links:
+      - db
+
+  db:
+    image: mysql:5.7
+    container_name: mysql5.7
+    environment:
+      - MYSQL_DATABASE=challenge
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3336:3306
+    restart: always
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
