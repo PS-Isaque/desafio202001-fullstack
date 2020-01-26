@@ -1,0 +1,12 @@
+.address-form{
+  &__fields{
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+  }
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0;
+  }
+}

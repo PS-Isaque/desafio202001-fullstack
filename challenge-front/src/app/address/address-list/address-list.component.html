@@ -1,0 +1,19 @@
+<div class="address-list">
+  <mat-list>
+    <mat-list-item *ngFor="let address of addresses; let i = index">
+      <span class="address-list__label">
+        {{ address.street }}
+      </span>
+      <button mat-icon-button (click)="onEdit(address)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="onRemove(address, i)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+
+  <button mat-mini-fab class="address-list__add" (click)="onAdd()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

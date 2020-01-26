@@ -1,0 +1,10 @@
+.address-list{
+  &__label{
+    flex: 1;
+  }
+  &__add{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+}
