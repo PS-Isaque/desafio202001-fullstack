@@ -1,12 +1,21 @@
 const Place = require("../models/Place");
+const { Op } = require("sequelize");
 
 module.exports = {
   async index(req, res) {
-    const params = req.query;
-    console.log(params);
-    const places = await Place.findAll();
+    const { name } = req.query;
 
-    return res.status(200).json({ data: places });
+    console.log(name);
+
+    if (name) {
+      const places = await Place.findAll({
+        where: { address: { [Op.like]: "%" + name + "%" } }
+      });
+      return res.status(200).json(places);
+    }
+
+    const places = await Place.findAll();
+    return res.status(200).json(places);
   },
 
   async show(req, res) {

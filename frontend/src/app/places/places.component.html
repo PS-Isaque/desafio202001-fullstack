@@ -1,0 +1,35 @@
+<div class="row mb-4">
+  <div class="col-md-8">
+    <ul class="list-group places">
+      <li
+        *ngFor="let place of places"
+        [class.selected]="place === selectedPlace"
+        (click)="onSelectPlace(place)"
+        class="list-group-item"
+      >
+        <span class="bagde">{{ place.id }}</span> {{ place.address }}
+        <a
+          class="btn btn-danger text-white btn-sm mr-auto"
+          title="delete place"
+          (click)="delete(place)"
+        >
+          Remover
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label>Addicionar um Lugar: </label>
+      <input #placeAddress class="form-control" />
+    </div>
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button
+      class="btn btn-primary"
+      (click)="add(placeAddress.value); heroName.value = ''"
+    >
+      Incluir
+    </button>
+  </div>
+</div>

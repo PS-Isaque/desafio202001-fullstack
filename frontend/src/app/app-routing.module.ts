@@ -1,16 +1,22 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { CommonModule } from "@angular/common";
 
-import { PlaceComponent } from "./place/place.component";
-import { AboutComponent } from "./about/about.component";
+import { PlacesComponent } from "./places/places.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { PlaceDetailComponent } from "./place-detail/place-detail.component";
 
 const routes: Routes = [
-  { path: "", component: PlaceComponent },
-  { path: "about", component: AboutComponent }
+  { path: "", redirectTo: "/dashboard", pathMatch: "full" },
+  { path: "places", component: PlacesComponent },
+  { path: "detail/:id", component: PlaceDetailComponent },
+  {
+    path: "dashboard",
+    component: DashboardComponent
+  }
 ];
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)]
 })
 export class AppRoutingModule {}

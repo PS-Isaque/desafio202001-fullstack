@@ -1,9 +1,24 @@
-<mat-toolbar color="primary">
-  <h1>
-    Awesome Places
-  </h1>
-  <button mat-button routerLink="">Lugares</button>
-  <button mat-button routerLink="/about">Sobre</button>
-</mat-toolbar>
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="/dashboard" class="nav-link">
+          Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/places" class="nav-link">
+          Lugares
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<router-outlet></router-outlet>
+<div class="container mt-2">
+  <h4>{{ title }}</h4>
+  <router-outlet></router-outlet>
+  <div class="logs">
+    <app-messages></app-messages>
+  </div>
+</div>

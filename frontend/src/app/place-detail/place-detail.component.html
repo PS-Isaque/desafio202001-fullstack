@@ -1,0 +1,24 @@
+<div *ngIf="place" class="mb-2">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">{{ place.address | uppercase }}</h4>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="">ID:{{ place.id }}</label>
+      </div>
+      <div class="form-group">
+        <label for="">Endereço</label>
+        <input
+          [(ngModel)]="place.address"
+          placeholder="address"
+          class="form-control"
+        />
+      </div>
+      <button (click)="goBack()" class="btn btn-secondary btn-sm mx-1">
+        Voltar
+      </button>
+      <button (click)="save()" class="btn btn-primary btn-sm">Salvar</button>
+    </div>
+  </div>
+</div>

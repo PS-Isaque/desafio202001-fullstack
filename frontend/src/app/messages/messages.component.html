@@ -1,0 +1,14 @@
+<div *ngIf="messageService.messages.length" class="p-4">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <a class="btn btn-primary btn-sm" (click)="messageService.clear()">
+      Clear
+    </a>
+  </div>
+
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <small>Ultimos Logs</small>
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div *ngFor="let message of messageService.messages">{{ message }}</div>
+  </div>
+</div>

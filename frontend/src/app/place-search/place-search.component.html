@@ -1,0 +1,20 @@
+<div id="search-component">
+  <div class="form-group">
+    <label for="search">Procurar um Lugar</label>
+    <input
+      #searchBox
+      id="search-box"
+      (input)="search(searchBox.value)"
+      class="form-control"
+      placeholder="Digite algo..."
+    />
+  </div>
+
+  <div class="list-group">
+    <li *ngFor="let place of places$ | async" class="list-group-item">
+      <a routerLink="/detail/{{ place.id }}">
+        {{ place.address }}
+      </a>
+    </li>
+  </div>
+</div>
