@@ -8,11 +8,11 @@ import { ActivatedRoute } from "@angular/router";
 import { map, switchMap } from "rxjs/operators";
 
 @Component({
-  selector: 'app-edit-address',
-  templateUrl: './edit-address.component.html',
-  styleUrls: ['./edit-address.component.css']
+  selector: 'app-show-address',
+  templateUrl: './show-address.component.html',
+  styleUrls: ['./show-address.component.css']
 })
-export class EditAddressComponent implements OnInit {
+export class ShowAddressComponent implements OnInit {
 
   address: Address;
   editForm: FormGroup;
@@ -65,28 +65,6 @@ export class EditAddressComponent implements OnInit {
       })
     }
 
-  hasError(field: string) {
-    return this.editForm.get(field).errors;
-  }
-
-  onSubmit() {
-    this.submitted = true;
-
-    console.log(this.editForm.value)
-    this.apiService.updateAddress(this.editForm.value)
-      .subscribe(
-        data => {
-          if(data == '') {
-            alert(data.message);
-          }else {
-            alert('Address updated successfully.');
-            this.router.navigate(['']);
-          }
-        },
-        error => {
-          alert(error);
-        });
-  }
 
   onCancel() {
     this.submitted = false;

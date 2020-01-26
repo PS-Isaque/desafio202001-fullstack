@@ -29,10 +29,14 @@ export class ListAddressComponent implements OnInit {
   };
 
   editAddress(id: number): void {
-    this.router.navigate([`edit-address`, id], {relativeTo: this.route});
+    this.router.navigate([`update`, id], {relativeTo: this.route});
+  };
+
+  showAddress(id: number): void {
+    this.router.navigate([`show`, id], {relativeTo: this.route});
   };
 
   addAddress(): void {
-    this.router.navigate(['add-address']);
+    this.router.navigate(['add']);
   };
 }

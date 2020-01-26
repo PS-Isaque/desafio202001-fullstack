@@ -1,2 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+label {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-personalizado {
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 20px;
+}
+
+.card-personalizado2 {
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 20px;
+}
+
+.border-personalizado {
+  border-left: 4px solid #12A646;
+}

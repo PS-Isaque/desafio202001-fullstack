@@ -7,6 +7,7 @@ WORKDIR /home/node/app
 COPY package*.json ./
 
 RUN npm install
+RUN npm install -g @angular/cli
 
 COPY . .
 
@@ -15,5 +16,3 @@ COPY --chown=node:node . .
 USER node
 
 EXPOSE 4200
-
-CMD [ "npm", "start" ]

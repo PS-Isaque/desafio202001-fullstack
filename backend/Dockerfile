@@ -17,5 +17,3 @@ COPY --chown=node:node . .
 USER node
 
 EXPOSE 3333
-
-CMD [ "yarn", "sucrase-node", "src/server.js" ]

@@ -9,13 +9,15 @@ import { ApiService } from './services/crud.service';
 import { routing } from './app-routing.module';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { ShowAddressComponent } from './address/show-address/show-address.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListAddressComponent,
     AddAddressComponent,
-    EditAddressComponent
+    EditAddressComponent,
+    ShowAddressComponent
   ],
   imports: [
     BrowserModule,
