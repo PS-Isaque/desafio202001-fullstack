@@ -1,0 +1,25 @@
+{
+  "name": "desafio-fullstack",
+  "version": "1.0.0",
+  "description": "desafio fulstack publicsoft",
+  "main": "index.js",
+  "repository": "https://github.com/MatthausNawan/desafio202001-fullstack",
+  "author": "Matthaus Nawan",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^7.17.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
