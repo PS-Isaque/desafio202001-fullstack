@@ -34,7 +34,6 @@
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/phpdocumentor/type-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/psr/container" />
-      <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/psr/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/psr/link" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/sensio/framework-extra-bundle" />
@@ -45,6 +44,7 @@
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/config" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/debug" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/debug-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/debug-pack" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/dependency-injection" />
@@ -71,15 +71,13 @@
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/mime" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/monolog-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/monolog-bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/notifier" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/options-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/orm-pack" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/phpunit-bridge" />
-      <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/polyfill-intl-grapheme" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/polyfill-intl-icu" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/polyfill-intl-idn" />
-      <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/polyfill-intl-normalizer" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/profiler-pack" />
@@ -95,7 +93,6 @@
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/serializer-pack" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/service-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/stopwatch" />
-      <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/string" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/test-pack" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/api_rest_endereco/vendor/symfony/translation-contracts" />
