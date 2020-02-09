@@ -1,0 +1,47 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div>
+    <h3>Detalhes do Endereço</h3>
+  </div>
+  <div class="button-row">
+    <button mat-flat-button color="accent" [routerLink]="['/enderecos']"><mat-icon>list</mat-icon>Voltar</button>
+  </div>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title><h2>{{endereco.rua}}</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="detalhes">
+        <span class="title">Bairro: </span>
+        <span class="info">{{endereco.bairro}}</span>
+      </div>
+      <div class="detalhes">
+        <span class="title">Cidade: </span>
+        <span class="info">{{endereco.cidade}}</span>
+      </div>
+      <div class="detalhes">
+        <span class="title">Complemento: </span>
+        <span class="info">{{endereco.complemento}}</span>
+      </div>
+      <div class="detalhes">
+        <span class="title">Número: </span>
+        <span class="info">{{endereco.numero}}</span>
+      </div>
+      <div class="detalhes">
+        <span class="title">Estado: </span>
+        <span class="info">{{endereco.estado}}</span>
+      </div>
+      <div class="detalhes">
+        <span class="title">CEP: </span>
+        <span class="info">{{endereco.cep}}</span>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" class="teste" [routerLink]="['/editar-endereco', endereco.id]"><mat-icon>edit</mat-icon> Editar</button>
+      <button mat-flat-button color="warn" (click)="deleteEndereco(endereco.id)"><mat-icon>delete</mat-icon> Excluir</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

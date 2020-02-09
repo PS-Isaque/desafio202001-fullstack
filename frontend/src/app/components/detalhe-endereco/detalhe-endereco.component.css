@@ -1,0 +1,18 @@
+.mat-flat-button {
+  margin: 5px;
+}
+.example-container {
+  position: relative;
+  padding: 5px;
+}
+.detalhes {
+  padding: 5px;
+  margin-left: 15px;
+}
+.title {
+  font-weight: bold;
+  font-size: 16px;
+}
+.info {
+  font-size: 15px;
+}
