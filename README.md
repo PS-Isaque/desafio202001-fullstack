@@ -1,45 +1,47 @@
-# Desafio Fullstack PublicSoft
+# Api REST com symfony 
 
-A PublicSoft é uma das melhores empresas de softwares para o setor público no nordeste. Localizada próximo a praia, possui um ambiente moderno e agradável de trabalho que permite liberar todo seu potêncial. Venha fazer parte desta equipe e trabalhar com tecnologias web modernas e metodologia ágil.
+## Requisitos
+- Symfony
+- php 7+
+- composer
+- PDO-pgSQL
+- postgres
 
-Com o nosso desafio queremos conhecer mais sobre seu estilo de programação e seus conhecimentos sobre padrões e convenções, tente manter o projeto mais legível e manutenível que conseguir sem deixar de mostrar onde suas habilidades mais se destacam.
+## Instalação
+```
+Clone o projeto, entre no diretório onde está localizado o projeto symfony e rode o seguinte comando:
 
-## Objetivo
+composer install
+```
+## Configure sua conexão com o seu banco de dados (postgres)
+```
+- Crie um arquivo chamado ".env" e copie todo conteúdo do arquivo ".env.dist" para ele e altere apenas suas credenciais do db na seguinte linha:
+    obs: Necessário informar a versão do banco
+    DATABASE_URL=pgsql://postgres:123@127.0.0.1:5432/publicsoft?serverVersion=11.5
+```
 
-Criar um sistema de cadastro de endereço tendo com back-end uma REST API em Express (nodejs) ou Symfony (PHP) utilizando o banco de dados Postgresql e como front-end uma tela de cadastro de endereço em Angular.
+## Criação do banco e das migrações
+```
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+```
 
-- Criação do endpoint de endereço com as seguintes operações:
-  - Listar endereços
-  - Exibir endereço
-  - Adicionar endereço
-  - Editar endereço
-  - Apagar endereço
-- Criar uma aplicação Angular para consumir a API capaz de fazer todas operações
+## Levantando servidor
+```
+symfony server:start
 
-## Requisitos do desafio
+- Pronto!! Sua aplicação estará disponível na porta 8000. ex: localhost:8000/enderecos
+```
 
-- Feito com tecnologias da stack proposta podendo usar bibliotecas e templates
-- Seguir padrões e convenções já estabelecias no mercado
-- Ter paginação
-- Ter Documentação
+## O que foi feito...
 
-## Bônus
+```
+- Criei uma estrutura de backend básica do servidor utilizando o estilo de 
+arquitetura da API REST.
+- Criação de um crud de endereço.
+- Também foi criado uma estrutura de service para tornar o controller mais limpo.
+- Separei o front do projeto em outro repositório com um projeto angular onde foi implementado o client. Segue abaixo o link do repositório com maiores informações...
+```
+[Repositório do front-end](https://github.com/lucascvasconcelos/endereco-api-client)
 
-- Interface bonita e intuitiva
-- Interface responsiva
-- Utilização do docker
-- Implementação de testes
-- Permitir pesquisa avançada
-- Autenticação
-- Criar um banco normalizado
-- Utilização de TypeScript
-
-## Critérios de avaliação
-
-- Verificação das funcionalidades
-- Organização do código
-- Aderência aos padrões e convenções
-- Normalização do banco
-- log do Git
-
-Sucesso e até breve.
+![image](https://i.ibb.co/LhLXG58/Captura-de-tela-de-2020-02-10-01-51-05.png)
