@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dacc221d-5fdd-4021-bfa8-dc3c795d0712" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.dist" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Service/EnderecoService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/desafio202001-fullstack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/desafio202001-fullstack.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
@@ -185,7 +184,7 @@
       <workItem from="1581179450627" duration="1552000" />
       <workItem from="1581183227266" duration="4187000" />
       <workItem from="1581250580379" duration="7518000" />
-      <workItem from="1581299144961" duration="6335000" />
+      <workItem from="1581299144961" duration="6656000" />
     </task>
     <servers />
   </component>
@@ -193,6 +192,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2052" y="358" width="589" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581311095429">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2052" y="358" width="589" height="397" key="#com.intellij.fileTypes.FileTypeChooser/1366.0.1920.1080/0.230.1366.768@1366.0.1920.1080" timestamp="1581311095429" />
     <state x="2085" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581252023276">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

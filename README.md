@@ -5,12 +5,19 @@
 - php 7+
 - composer
 - PDO-pgSQL
+- postgres
 
 ## Instalação
 ```
 Clone o projeto, entre no diretório onde está localizado o projeto symfony e rode o seguinte comando:
 
 composer install
+```
+## Configure sua conexão com o seu banco de dados (postgres)
+```
+- Crie um arquivo chamado ".env" e copie todo conteúdo do arquivo ".env.dist" para ele e altere apenas suas credenciais do db na seguinte linha:
+    obs: Necessário informar a versão do banco
+    DATABASE_URL=pgsql://postgres:123@127.0.0.1:5432/publicsoft?serverVersion=11.5
 ```
 
 ## Criação do banco e das migrações
