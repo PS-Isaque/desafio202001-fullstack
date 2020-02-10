@@ -106,7 +106,13 @@
       <path value="$PROJECT_DIR$/api_rest_endereco/vendor/symfony/phpunit-bridge" />
       <path value="$PROJECT_DIR$/api_rest_endereco/vendor/symfony/maker-bundle" />
       <path value="$PROJECT_DIR$/api_rest_endereco/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/api_rest_endereco/vendor/symfony/notifier" />
+      <path value="$PROJECT_DIR$/api_rest_endereco/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/api_rest_endereco/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/api_rest_endereco/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/api_rest_endereco/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/api_rest_endereco/vendor/nelmio/cors-bundle" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
 </project>
